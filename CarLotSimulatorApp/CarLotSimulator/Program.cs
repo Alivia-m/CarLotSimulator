@@ -28,6 +28,14 @@ namespace CarLotSimulator
             Car ford = new Car() { Color = "blue", Year = 2016, Make = "Ford", Model = "Fusion", EngineNoise = "silent", HonkNoise = "boop boop", IsDrivable = true};
             carInventory.CarLotInventory.Add(ford);
 
+
+            Console.WriteLine($"Number of cars availible: {CarLot.numberOfCars}");
+            foreach(var car in carInventory.CarLotInventory)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
+            }
+
             jeep.MakeEngineNoise();
             jeep.MakeHonkNoise();
 
@@ -36,12 +44,6 @@ namespace CarLotSimulator
 
             ford.MakeEngineNoise();
             ford.MakeHonkNoise();
-
-            foreach(var car in carInventory.CarLotInventory)
-            {
-                Console.WriteLine();
-                Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
-            }
 
             //*************BONUS*************//
 

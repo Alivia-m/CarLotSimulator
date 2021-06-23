@@ -4,16 +4,12 @@ using System.Text;
 
 namespace CarLotSimulator
 {
-    class Car
+    public class Car
     {
-        public string Color { set; get; }
-        public int Year { set; get; }
-        public string Make { set; get; }
-        public string Model { set; get; }
-        public string EngineNoise { set; get; }
-        public string HonkNoise { set; get; }
-        public bool IsDrivable { set; get; }
-
+        public Car()
+        {
+            CarLot.numberOfCars++;
+        }
 
         public Car(string color, int year, string make, string model, string engineNoise, string honkNoise, bool isDrivable = false)
         {
@@ -24,10 +20,13 @@ namespace CarLotSimulator
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
         }
-
-        public Car()
-        {
-        }
+        public string Color { set; get; }
+        public int Year { set; get; }
+        public string Make { set; get; }
+        public string Model { set; get; }
+        public string EngineNoise { set; get; }
+        public string HonkNoise { set; get; }
+        public bool IsDrivable { set; get; }
 
         public void MakeEngineNoise()
         {
